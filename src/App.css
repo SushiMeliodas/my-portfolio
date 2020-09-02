@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Custom style change here */
+
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Roboto Mono", monospace;
+
+  /* Font weight */
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  /* Color background & color text */
+  --clr-light: #ffffff;
+  --clr-dark: #303030;
+  --clr-accent: #ffa500;
+
+  /* Font size */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  /* Box shadow*/
+  --bs-dark: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.75em rgba(0, 0, 0, 0.15);
+  --bs-light: 0.25em 0.25em 0.75em rgba(245, 245, 245, 0.25),
+    0.125em 0.125em 0.75em rgba(255, 255, 255, 0.15);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* For smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.App-link {
-  color: #61dafb;
+/* General style */
+body {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+  padding: 5em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Focus effect */
+/* :focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+} */
+
+.btn__practice {
+  display: inline-block !important;
+  background: var(--clr-accent) !important;
+  color: var(--clr-light) !important;
+  letter-spacing: 2px !important;
+  font-weight: var(--fw-bold) !important;
+  font-size: 0.8rem !important;
+}
+
+.btn__practice:hover {
+  transform: scale(1.1);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.section__title {
+  margin-bottom: 0.25rem;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  padding: 0.25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
 }
