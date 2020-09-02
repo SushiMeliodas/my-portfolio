@@ -1,3 +1,9 @@
+# My Portfolio
+
+This is my Portfolio created using React+Javascript+CSS+HTML according to a Tutorial Video from Youtube.
+
+This Portfolio have made some changes according to my own preferences.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
